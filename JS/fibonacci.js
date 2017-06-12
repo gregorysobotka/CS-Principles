@@ -43,4 +43,4 @@ var fib = (n) => (n <= 1) ? n : fib(n - 1) + fib(n - 2)
 var getDynamicFib = (n) =>
   (this.hasOwnProperty(n+'-key'))
     ? this[n+'-key']
-    : this[n+'-key'] = (n <= 1) ? n : solveFib(n - 1) + solveFib(n - 2)
+    : this[n+'-key'] = (n <= 1) ? n : getDynamicFib(n - 1) + getDynamicFib(n - 2)
